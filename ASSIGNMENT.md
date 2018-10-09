@@ -44,7 +44,7 @@ Use 10 countries and the data from assignment 1 to create a responsive line char
 
 ### Pie chart using pie layout (5 pts)
 
-Using 5 countries and the data of your choice, create a pie chart. Using Bootstrap, implement a card to show generic data and interaction information when the mouse is not hovering on the pie chart, or information related to that sector when the mouse is hovering on a sector of the pie chart. Add visual feedback on mouse hover.
+Using 5 countries and the data of your choice, create a pie chart. Using Bootstrap, implement a card to show generic data and interaction information when the mouse is not hovering on the pie chart, or information related to the sector when the mouse is hovering on a sector of the pie chart. Add visual feedback on mouse hover.
 
 | Quality       | Points | Description |
 | ------------- | ------ | ----------- |
