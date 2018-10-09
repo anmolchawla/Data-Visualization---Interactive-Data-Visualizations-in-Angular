@@ -2,16 +2,16 @@
 
 ## Description
 
-Using Bootstrap, Angular and D3 layouts implement a website using data from past assignments and data of your choice as outlined in the rubric.
+Using Bootstrap, Angular and D3 layouts, implement a website using data from past assignments and data of your choice as outlined in the rubric.
 
 ## Rubric
 
 ### Development and published site (5 pts)
 
-Use Angular cli and node to implement the site. Document set-up & deployment in [README.md](README.md). Use incremental commits that are consistent and tested. Use a consistent color scheme for legends and page. Layout uses Bootstrap Components and use Angular components. Publish the site at:
+Use Angular cli and node to implement the site. Document set-up & deployment in [README.md](README.md). Use incremental commits that are consistent and tested. Use a consistent color scheme for the legends and the page. Layout uses Bootstrap components and use Angular components. Publish the site at:
 
 ```url
-http://www-scf.usc.edu/~<username>/
+http://www-scf.usc.edu/~<username>/a8/
 ```
 
 Present your the data and cite your source in the home page of the site.
@@ -24,7 +24,7 @@ Present your the data and cite your source in the home page of the site.
 
 ### Bubble chart using circle packing (5 pts)
 
-Based on data and design from assignment 2 to create a bubble chart with D3 and using the circle packing layout. When hovering on bubbles show tooltips with information on the data for the bubble.
+Based on the data and design from assignment 2, create a bubble chart with D3 using the circle packing layout. When the mouse hovers a bubble, show tooltips with information on the data for that bubble.
 
 | Quality       | Points | Description |
 | ------------- | ------ | ----------- |
@@ -34,7 +34,7 @@ Based on data and design from assignment 2 to create a bubble chart with D3 and 
 
 ### Responsive line chart (5 pts)
 
-Use data from assignment 1 to create a responsive line chart similar to what google charts generates complete with a legend. Implement line selection with pop-out effect (one line selected at the time). Implement with a mechanism to show/hide data points on the chart. Make the chart responsive.
+Use 10 countries and the data from assignment 1 to create a responsive line chart similar to what Google charts can generate, complete with a legend. Implement line selection with pop-out effect (one line can be selected at a time). Implement a mechanism to show/hide data points on the chart. Make the chart [responsive](https://en.wikipedia.org/wiki/Responsive_web_design).
 
 | Quality       | Points | Description |
 | ------------- | ------ | ----------- |
@@ -44,7 +44,7 @@ Use data from assignment 1 to create a responsive line chart similar to what goo
 
 ### Pie chart using pie layout (5 pts)
 
-Using 5 countries and data of your choice create a pie chart that shows the data. Using Bootstrap implement a card to show generic data and interaction information when not hovering on the pie or information related to the data when hovering on a sector of the pie. Add visual feedback on mouse hover.
+Using 5 countries and the data of your choice, create a pie chart. Using Bootstrap, implement a card to show generic data and interaction information when the mouse is not hovering on the pie chart, or information related to that sector when the mouse is hovering on a sector of the pie chart. Add visual feedback on mouse hover.
 
 | Quality       | Points | Description |
 | ------------- | ------ | ----------- |
