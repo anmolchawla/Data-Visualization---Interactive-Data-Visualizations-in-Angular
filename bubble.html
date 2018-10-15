@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>World Percentage Rural Population </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <center>
+     <br>
+     <br>
+ <!--      <svg width="960" height="960" style="background-color: #93F5D0;" ></svg> -->
+      <div id="bubs">
+      </div>
+    </center>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+
+
+//************************************* Bubble Chart Begin ***********************************************
+// function build(data){
+// var diameter = 600;
+// //var countries = ["China","France","India","Portugal","Spain","Srilanka","Sweden","Switzerland","U.K","U.S"];
+
+// var color = d3.scaleOrdinal([ "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf","#C6DBEF"]);
+
+// var bubble = d3.pack(data)
+//                .size([diameter, diameter])
+//                .padding(1.5);
+// console.log(diameter);
+// var svg = d3.select("div")
+//             .append("svg")
+//             .attr("width", diameter)
+//             .attr("height", diameter)
+//             .attr("class", "bubble");
+
+// var nodes = d3.hierarchy(data)
+//               .sum(function(d) { return d.size; });
+
+// var node = svg.selectAll(".node")
+//               .data(bubble(nodes).descendants())
+//               .enter()
+//               .append("g")
+//               .attr("class", "node")
+//               .attr("transform", function(d) {
+//                   return "translate(" + d.x + "," + d.y + ")";
+//               });
+
+// node.append("title")
+//     .text(function(d) {
+//             return d.name + ": " + d.size;
+//         });
+
+// node.append("circle")
+//         .attr("r", function(d) {
+//             return d.r;
+//         })
+//         .style("fill", function(d,i) {
+//             return color(i);
+//         });
+
+// node.append("text")
+//                       .filter(function(d){
+//                   return  !d.children
+//               })
+//         .attr("dy", ".3em")
+//         .style("text-anchor", "middle")
+//         .text(function(d) {
+//             return d.data.name.substring(0, d.r / 3) + ": " + d.data.size;
+//         });
+
+// d3.select(self.frameElement)
+//         .style("height", diameter + "px");
+
+
+// return;
+// }
+
+// d3.json("world.json").then(function (data) { 
+//   build(data);
+// });
+
+//************************************* Bubble Chart End ***********************************************
+
+
+//************************************* Line Chart Begins ***********************************************
+// function build1(data){
+// var years = ["1972","1977","1982","1987","1992","1997","2002","2007","2012","2017"];
+// var width = 800;
+// var height = 900;
+// var color = d3.scaleOrdinal(d3.schemeCategory10);
+// var svg = d3.select("div")
+//             .append("svg")
+//             .attr("width", width)
+//             .attr("height", height)
+//             .style("background","pink");
+  
+
+// var xScale = d3.scaleBand()
+//                .domain(years) 
+//                .range([50,700]);
+
+// svg.append("g")
+// .attr("transform", "translate(30," + 800 + ")")
+// .call(d3.axisBottom(xScale));
+
+
+
+// var yScale = d3.scaleLinear()
+//     .domain([0, 100]) 
+//     .range([500, 0]); 
+
+
+// svg.append("g")
+//    .attr("transform","translate(80," + 300 + ")")
+//    .call(d3.axisLeft(yScale));
+
+
+
+
+//  var country = svg.selectAll(".country")
+//                     .data(data)
+//                     .enter()
+//                     .append("g")
+//                     .attr("class", "countryLine");
+
+
+// //console.log(yScale(data[0].check[0][years[0]]));
+
+// var line =  d3.line()
+//               .y((d,i) => {return yScale(d[years[i]]);})
+//               .x((d,i) => {return xScale(years[i]);})
+//               //.y((d) => console.log(d))
+//               //.x((d,i) => console.log(xScale(years[i])))
+             
+//               //.x((d,i) => {return xScale(years[i]);})
+//               //.y((d,i)=> {return yScale(d[years[i]]);})
+
+             
+              
+
+// country.append("path")
+//        .attr("class", "line")
+//        .style("stroke", (d,i) => (color(i)))
+//        .attr("fill", "none")
+//        .attr("d", (d) => line(d.check[0]));
+       
+//        //.attr("d", (d) => console.log(xScale(1972)));
+
+
+
+// return;
+// }
+
+
+// d3.json("world1.json").then(function (data) { 
+//   console.log(data);
+//   build1(data);
+// });
+
+//************************************* Line Chart End ***********************************************
+
+
+
+
+//************************************* Pie Chart Begins ***********************************************
+
+function build(data1){
+
+var width = 600,height = 500;
+colors = d3.scaleOrdinal(d3.schemeDark2);
+var svg = d3.select("div")
+            .append("svg")
+            .attr("width", width)
+            .attr("height",height)
+            .style("background","pink");
+
+
+
+var data = d3.pie().sort(null).value(function(d){return d.size;})(data1);
+
+
+var segments = d3.arc()
+                 .innerRadius(0)
+                 .outerRadius(200)
+                 .padAngle(.05)
+                 .padRadius(50);
+
+
+
+var sections = svg.append("g")
+                  .attr("transform","translate(250,250)")
+                  .selectAll("path")
+                  .data(data);
+
+
+var arcOver = d3.arc()
+      .innerRadius(0)
+      .outerRadius(200 + 20);
+
+var arcAfter = d3.arc()
+                 .innerRadius(0)
+                 .outerRadius(200);
+
+sections.enter()
+        .append("path")
+        .attr("d",segments)
+        .attr("fill",function(d){return colors(d.data.size);})
+        .on("mouseover",function(d){
+          d3.select(this).transition()
+          .duration(1000)
+          .attr("d", arcOver);
+        })
+        .on("mouseout", function(d) {
+        d3.select(this).transition()
+          .duration(1000)
+          .attr("d", arcAfter);
+      });
+
+var content = d3.select("g").selectAll("text").data(data);
+content.enter().append("text").each(function(d){var center = segments.centroid(d);
+d3.select(this).attr("x",center[0]).attr("y",center[1]).text(d.data.name);
+})
+
+
+console.log(data);
+
+
+    
+
+return;
+}
+
+d3.json("world2.json").then(function (data) { 
+  build(data);
+});
+
+
+
+//************************************* Pie Chart Ends ***********************************************
+</script>
+
+</body>
+</html>
