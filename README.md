@@ -10,6 +10,8 @@ Certain design and implementations considerations are as follows:
 The website is currently being hosted at (http://www-scf.usc.edu/~anmolcha/a8/line-chart)
 
 The following charts have been implemented:
+
+
 Chart 1: Based on the data and design from assignment 2  a bubble chart with D3 using the circle packing layout was created where the mouse hovers on a bubble and shows tooltips with information on the data for that bubble
 
 Chart 2: Using 10 countries and the data from assignment 1, a responsive line chart similar to what Google charts was generated, complete with a legend. Line selection with pop-out effect (one line can be selected at a time) with a mechanism to show/hide data points on the chartwas implemented
